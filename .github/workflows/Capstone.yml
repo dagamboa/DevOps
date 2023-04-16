@@ -16,9 +16,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '16.13.1'
-      - name: Capstone directory
+      - name: Install dependencies and test app
         working-directory: ./capstone_project/hello-world
-      - name: Install dependencies
-        run: npm install
-      - name: Test app
-        run: npm test
+        run: |
+          npm install
+          npm test
