@@ -1,0 +1,24 @@
+name:  Capstone Project
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+#https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+  Test:
+    runs-on: ubuntu-latest
+    
+    steps: 
+      - uses: actions/checkout@v3
+      - name: Use Node.js 16.13.1
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16.13.1'
+      - name: Capstone directory
+        working-directory: ./capstone_project/hello-world
+      - name: Install dependencies
+        run: npm install
+      - name: Test app
+        run: npm test
