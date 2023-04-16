@@ -17,7 +17,7 @@ jobs:
         with:
           node-version: '16.13.1'
       - name: Install dependencies and test app
-        working-directory: ./capstone_project/hello-world
+        working-directory: ./capstone_project/hello-world/app
         run: |
           npm install
           npm test
