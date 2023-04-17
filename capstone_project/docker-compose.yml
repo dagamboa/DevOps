@@ -1,0 +1,14 @@
+version: "3.9"  
+services:
+  hello-world:
+    build: 
+      context: ./
+      dockerfile: ./hello-world/Dockerfile
+    ports: 
+      - 3000:3000
+    container_name: hello-world
+  ansible-controller:
+    build: 
+      context: ./
+      dockerfile: ./ansible-controller/Dockerfile
+    container_name: ansible-controller
