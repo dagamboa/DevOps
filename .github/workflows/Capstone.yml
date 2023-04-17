@@ -8,8 +8,8 @@ on:
 jobs:
 #https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
   Test:
+    name: App test
     runs-on: ubuntu-latest
-    
     steps: 
       - uses: actions/checkout@v3
       - name: Use Node.js 16.13.1
@@ -21,3 +21,13 @@ jobs:
         run: |
           npm install
           npm test
+  Hello-World:
+    needs: [Test]
+    name: Containers
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build containers
+        working-directory: ./capstone_project
+        run: ./create-capstone.project
+      
