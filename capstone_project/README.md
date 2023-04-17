@@ -72,8 +72,8 @@ NOTE: From here on, whenever we say repository , that refers to your forked repo
 - Update the node js application to display "Hello DevOps!" instead of "Hello World!" using ansible.
 
 ## Solution
-- Run script ./create-capstone-project
+- Run script ./create-capstone-project and wait until containers are built
 - Enter to http://localhost:3000
 - ???
-- Enjoy!
+- Profit!
 
