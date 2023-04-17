@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+sudo docker compose up -d --build
+sudo docker exec -t ansible-controller /bin/sh -c "cd ansible_files ; ansible-playbook -i inventory.ini playbook.yml ; exit"

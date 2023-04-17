@@ -1,0 +1,6 @@
+- name: Ansible controller test
+  hosts: all
+  become: true
+  tasks:
+    - name: Ping Check using ping module
+      ping:

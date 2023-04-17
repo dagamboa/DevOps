@@ -1,5 +1,5 @@
 FROM node:16.13.1-alpine
-COPY ./ /app
+COPY ../app /app
 WORKDIR /app
 RUN npm install
 RUN npm run test
